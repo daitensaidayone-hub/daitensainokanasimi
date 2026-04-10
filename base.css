@@ -1,0 +1,253 @@
+/* --- 1. 変数・基本設定 --- */
+:root {
+  --primary-color: #004098; /* 早稲田・信頼感のある青 */
+  --accent-color: #e67e22;
+  --bg-color: #f4f7f9;
+  --card-bg: #ffffff;
+  --text-color: #333;
+}
+
+body { 
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif; 
+  line-height: 1.7; 
+  color: var(--text-color); 
+  max-width: 700px; 
+  margin: 0 auto; 
+  padding: 0; 
+  background-color: var(--bg-color); 
+}
+
+/* --- 2. ヘッダー・共通要素 --- */
+header { 
+  background: var(--primary-color); 
+  color: white; 
+  padding: 30px 20px; 
+  text-align: center; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+h1 { 
+  margin: 0; 
+  font-size: 1.4rem; 
+  letter-spacing: 1px; 
+  font-family: "Optima", "Lato", "Helvetica Neue", "Hiragino Sans", sans-serif;
+}
+
+section { 
+  background: var(--card-bg); 
+  margin: 20px; 
+  padding: 25px; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+  scroll-margin-top: 20px; 
+}
+
+h3 { 
+  color: var(--primary-color); 
+  border-bottom: 2px solid #eee; 
+  padding-bottom: 8px; 
+  margin-top: 0; 
+  font-size: 1.2rem; 
+  display: flex; 
+  align-items: center; 
+}
+
+h3::before { 
+  content: "■"; 
+  margin-right: 8px; 
+  font-size: 0.8rem; 
+  vertical-align: middle; 
+}
+
+/* --- 3. ページ内の目次（nav）デザイン --- */
+#js-toc { 
+  background: white; 
+  margin: 20px; 
+  padding: 20px; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+}
+
+#js-toc h2 { 
+  font-size: 1.1rem; 
+  margin-top: 0; 
+  border-left: 5px solid var(--primary-color); 
+  padding-left: 10px; 
+  color: var(--primary-color); 
+}
+
+/* 目次内のリストを2列にする（メニュー側には影響しない） */
+#js-toc ul { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 8px; 
+}
+
+@media (max-width: 480px) { 
+  #js-toc ul { 
+    grid-template-columns: 1fr; 
+  } 
+  .nav-list {
+    flex-direction: column !important; /* ここで縦に切り替え */
+  }
+  .nav-list li {
+    border-right: none !important;
+    border-bottom: 1px solid #e9e9e9 !important;
+  }
+  .nav-list li:last-child {
+    border-bottom: none !important;
+  }
+}
+
+/* 目次内のボタンデザイン */
+#js-toc li a { 
+  display: block; 
+  background: #f0f4f8; 
+  padding: 10px; 
+  border-radius: 6px; 
+  color: #333; 
+  text-decoration: none; 
+  font-size: 0.9rem; 
+  transition: 0.2s; 
+  text-align: center;
+  font-weight: bold;
+}
+
+#js-toc li a:hover { 
+  background: var(--primary-color); 
+  color: white; 
+}
+
+/* --- 4. ハンバーガーメニュー（共通ナビ） --- */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 44px;
+  height: 44px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.hamburger:hover { opacity: 0.7; }
+.hamburger:active { transform: scale(0.95); opacity: 0.5; }
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background: #fff;
+  z-index: 999;
+  transition: 0.3s ease;
+  padding-top: 60px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+.nav-menu ul { list-style: none; padding: 0; margin: 0; display: block; } /* グリッド解除 */
+.nav-menu ul li a {
+  display: block;
+  padding: 15px 25px;
+  color: #115ac0;
+  text-decoration: none;
+  border-bottom: 1.0px solid #eee;
+  font-size: 0.95rem;
+  background: none;
+  text-align: left;
+  font-weight: 700;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #eee;
+  color: #004098;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 998;
+}
+
+.nav-list{
+  background-color: #FFF;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+}
+
+.nav-list li{
+  list-style: none;
+  background-color: #004098;
+  border-radius: 10px;
+  margin-top: 3px;
+}
+
+.nav-list li a{
+  color:#ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+
+/* メニュー開閉時のアニメーション */
+.is_menuOpen .hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.is_menuOpen .hamburger span:nth-child(2) { opacity: 0; }
+.is_menuOpen .hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+.is_menuOpen .nav-menu { right: 0; }
+.is_menuOpen .menu-overlay { display: block; }
+
+/* --- 5. パーツ・便利クラス --- */
+.important { color: #d35400; font-weight: bold; background: #fff5eb; padding: 2px 5px; border-radius: 4px; }
+.time-table { background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px dashed #ccc; font-size: 0.95rem; }
+.btn-link { display: inline-block; background: var(--primary-color); color: white !important; padding: 8px 15px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; margin-top: 5px; }
+
+/* ゴミ分別リスト */
+.gomi-list { list-style: none; padding: 0; }
+.gomi-list li { margin-bottom: 12px; border-bottom: 1px dotted #ddd; padding-bottom: 5px; }
+.gomi-day { display: inline-block; background: #555; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 8px; min-width: 80px; text-align: center; }
+
+/* 「▲ 目次に戻る」ボタン */
+.back-to-top { text-align: center; margin: 40px 0; }
+.back-to-top a {
+  display: inline-block;
+  text-decoration: none;
+  background: #777; 
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  transition: opacity 0.2s;
+}
+
+/* --- 6. フッター --- */
+footer { text-align: center; padding: 30px; color: #888; font-size: 0.8rem; }

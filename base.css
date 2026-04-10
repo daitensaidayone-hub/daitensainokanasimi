@@ -210,10 +210,10 @@ h3::before {
   border-radius: 10px;
   margin-left: 0 !important;
   padding-left: 0 !important;
+  list-style: none;
 }
 
 .nav-list li{
-  list-style: none;
   background-color: #004098;
   border-radius: 10px;
   margin-top: 3px;

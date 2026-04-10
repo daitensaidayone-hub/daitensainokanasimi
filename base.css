@@ -223,6 +223,7 @@ h3::before {
   font-weight: 600;
   text-decoration: none;
   displau:block;
+  text-align:center;
 }
 
 .nav-list li:hover{

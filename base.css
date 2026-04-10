@@ -217,21 +217,25 @@ h3::before {
   background-color: #004098;
   border-radius: 10px;
   margin-top: 3px;
-  flex:1;
+  text-align: center;
+  flex: 1;
 }
 
 .nav-list li a{
   color:#ffffff;
   font-weight: 600;
   text-decoration: none;
-  displau:block;
-  text-align:center;
+  display: block;
+  text-align: center;
 }
 
 .nav-list li:hover{
   background-color: #4c7bbd;
 }
 
+.nav-list li a:hover{
+  color: #e8e8e8;
+}
 
 /* メニュー開閉時のアニメーション */
 .is_menuOpen .hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }

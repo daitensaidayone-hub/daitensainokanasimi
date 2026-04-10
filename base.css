@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* --- 1. 変数・基本設定 --- */
 :root {
   --primary-color: #004098; /* 早稲田・信頼感のある青 */

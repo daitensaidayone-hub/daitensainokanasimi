@@ -222,6 +222,7 @@ h3::before {
   color:#ffffff;
   font-weight: 600;
   text-decoration: none;
+  displau:block;
 }
 
 .nav-list li:hover{

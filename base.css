@@ -204,7 +204,7 @@ h3::before {
   justify-content: space-between;
   background-color: #FFF;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 17px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 10px;
@@ -227,7 +227,6 @@ h3::before {
   text-decoration: none;
   display: block;
   text-align: center;
-  font-size: 13px;
 }
 
 .nav-list li:hover{

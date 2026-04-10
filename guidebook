@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年度 WID西所沢 ガイドブック</title>
+    <link rel="stylesheet" href="base.css">
+    <script src="code.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>ガイドブック</h1>
+    <button class="hamburger" id="js-hamburger" aria-label="メニュー開閉">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="nav-menu" id="js-nav-menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="guidebook.html">ガイドブック</a></li>
+            <li><a href="emergency.html">緊急対応マニュアル</a></li>
+          </ul>
+      </nav>      
+</header>
+
+<nav id="js-toc">
+    <h2>【目次】</h2>
+    <ul>
+        <li><a href="#entrance">寮を出入りする時</a></li>
+        <li><a href="#elevator">エレベーター利用</a></li>
+        <li><a href="#meal">寮食（Domico）</a></li>
+        <li><a href="#cafeteria">食堂の利用</a></li>
+        <li><a href="#laundry">洗濯・乾燥機</a></li>
+        <li><a href="#trash">ゴミ捨て・分別</a></li>
+        <li><a href="#stay-out">外泊届</a></li>
+        <li><a href="#visitor">来客・宿泊</a></li>
+        <li><a href="#delivery">宅配物の受取</a></li>
+        <li><a href="#noise">騒音について</a></li>
+        <li><a href="#other">禁止事項・その他</a></li>
+        <li><a href="#service">大学のサービス</a></li>
+    </ul>
+</nav>
+
+<section id="entrance">
+    <h3>寮を出入りする時</h3>
+    <p><span class="important">"必ず"ICチップ（部屋の鍵に付属）</span>をタッチしてください。</p>
+    <p>寮生の所在確認のために必要となるため、徹底をお願いします。</p>
+</section>
+
+<section id="elevator">
+    <h3>エレベーターを利用する時</h3>
+    <p>利用にはICチップのタッチが必要です。外出時は必ず鍵を持ち歩いてください。</p>
+    <p style="font-size: 0.9rem; color: #666;">※点検時などは非常階段が開放されますが、防犯上、通常時の常用は禁止です。</p>
+</section>
+
+<section id="meal">
+    <h3>寮食</h3>
+    <p><strong>Domicoアプリ</strong>より予約してください。</p>
+    <ul>
+        <li><strong>予約</strong>：前月の中頃から可能（前日や当日の場合残数がない可能性があります）</li>
+        <li><strong>キャンセル</strong>：食べない時は必ず行うこと（食事別契約では当日キャンセルに別途費用が発生します）</li>
+    </ul>
+    <div class="time-table">
+        <strong>朝食：</strong> 7:00〜8:20（下膳 8:40）<br>
+        <strong>夕食：</strong> 18:30〜20:45（下膳 21:10）
+    </div>
+    <p>※間に合いそうにない時はアプリでチェックインし、<strong>必ず</strong>RAや寮母さんに連絡して食堂へ伝えてもらいましょう。</p>
+</section>
+
+<section id="cafeteria">
+    <h3>食堂の利用</h3>
+    <p>利用可能時間：<strong>24:00まで</strong></p>
+    <ul>
+        <li>22時以降は静かな声で会話してください。</li>
+        <li>お茶・お湯・レンジはいつでも利用可能です。</li>
+        <li>お茶の補充依頼は日曜日以外の常識的な時間帯にお願いします。</li>
+    </ul>
+</section>
+
+<section id="laundry">
+    <h3>洗濯</h3>
+    <p>24時間利用可能です。</p>
+    <ul>
+        <li><strong>洗濯機（無料）：</strong>手前3台（男性用）/ 奥5台（女性用）</li>
+        <li><strong>乾燥機（有料）：</strong>100円 / 30分</li>
+    </ul>
+</section>
+
+<section id="trash">
+    <h3>ゴミ捨て</h3>
+    <p>所沢市は分別が厳格です。ゴミ袋には<strong>部屋番号</strong>を記入してください。</p>
+    <ul class="gomi-list">
+        <li><span class="gomi-day">月・木</span><strong>燃やせるゴミ</strong>（生ゴミ含む）</li>
+        <li><span class="gomi-day">金曜日</span><strong>プラスチック類</strong>（汚れは洗うこと）</li>
+        <li><span class="gomi-day">第1・3火曜</span><strong>ペットボトル</strong>（ラベル・キャップ分別）</li>
+        <li><span class="gomi-day">第1・3水曜</span><strong>ビン・カン</strong>（中を洗う）</li>
+        <li><span class="gomi-day">第2・4水曜</span><strong>破砕・有害ごみ</strong></li>
+        <li><span class="gomi-day">第2火曜</span><strong>小型家電・古着・古布</strong></li>
+        <li><span class="gomi-day">第4火曜</span><strong>段ボール・古紙類</strong></li>
+    </ul>
+    </ul>
+    <a href="https://www.city.tokorozawa.saitama.jp/kurashi/gomi/gomidashikata/index.html" class="btn-link" target="_blank">所沢市ゴミ出し詳細ページ</a>
+</section>
+
+<section id="stay-out">
+    <h3>外泊</h3>
+    <p>急な場合も含め、必ず<strong>Domicoアプリ</strong>から外泊届を提出してください。</p>
+</section>
+
+<section id="visitor">
+    <h3>来客</h3>
+    <ul>
+       <li><strong>友人：</strong>日中のみ可（異性は厳禁。発覚時は退寮処分となります）。</li>
+       <li><strong>宿泊：</strong>友人は不可。原則同性の家族のみ（2泊3日まで）可能です。</li>
+       <li><strong>手続：</strong>寮母さんへ事前連絡し、受付名簿に記入してください。</li>
+    </ul>
+</section>
+
+<section id="delivery">
+    <h3>宅配物</h3>
+    <p>寮母さんの勤務時間内であれば代理受領が可能です。</p>
+    <p style="font-size: 0.9rem;">※日曜や夜間などの勤務時間外は自身で受け取れるよう日時指定を活用してください。</p>
+</section>
+
+<section id="noise">
+    <h3>騒音について</h3>
+    <ul>
+        <li>建物内に音が伝わるのを防ぐため、居室内の移動は静かにお願いいたします。</li>
+        <li>廊下や風呂場での大きな音は外まで響くため、お気をつけください。</li>
+        <li>騒音等で気になることがありましたら、寮母さんやRAにご連絡ください。</li> 
+    </ul>
+</section>
+
+<section id="other">
+    <h3>その他・禁止事項</h3>
+    <ul>
+        <li>寮内は<strong>全面禁酒・禁煙</strong>です。</li>
+        <li>男女の部屋の行き来は禁止です。</li>
+        <li><strong>火気類</strong>の持込は厳禁（コタツ・電気毛布等は要相談）。</li>
+        <li>自転車を使い始める際は寮母さんへ連絡してください。</li>
+        <li>フックやクギを壁等に直接取り付けないでください。</li>
+        <li>居室の状態次第では退寮時に修繕費がかかります。</li>
+    </ul>
+</section>
+
+<section id="service">
+    <h3>便利な大学のサービス</h3>
+    <ul style="padding-left: 20px;">
+        <li><a href="https://wnpspt.waseda.jp/student/supportanywhere/">サポエニ（困った時の窓口）</a></li>
+        <li><a href="https://www.waseda.jp/inst/student/support/medicalfee_reimbursement">医療給付（医療費補助）</a></li>
+        <li><a href="https://www.waseda.jp/inst/career/">キャリアセンター（就活）</a></li>
+        <li><a href="https://www.waseda.jp/inst/sjc/offer">学内アルバイト</a></li>
+    </ul>
+</section>
+
+<div class="back-to-top">
+    <a href="#">▲ 目次に戻る</a>
+</div>
+
+<footer>
+    &copy; 2026 WID Nishitokorozawa
+</footer>
+
+</body>
+</html>
+

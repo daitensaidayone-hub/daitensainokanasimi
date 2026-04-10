@@ -223,10 +223,11 @@ h3::before {
 
 .nav-list li a{
   color:#ffffff;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   display: block;
   text-align: center;
+  font-size: 13px;
 }
 
 .nav-list li:hover{
